@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+  <title>demo</title>
+</head>
+<body>
+  <h1>text demo</h1>
+  <p>Enter text here: <input type="text" id="txt" placeholder="^-^"></p>
+  <p>Enter delay (in ms): <input type="text" id="offset"></p>
+  <button onclick="start()">go!</button>
+
+  <script>
+    function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    async function start() {
+      let input = document.getElementById("txt").value;
+      let ms = document.getElementById("offset").value;
+      var txt = input.split(" ");
+
+      for (var i = 0; i < txt.length; i++) {
+        document.getElementById("uwu").innerHTML = txt[i];
+        await sleep(ms);
+      }
+    }
+  </script>
+
+  <h2 id="uwu">look here look here uwu</h2>
+</body>
