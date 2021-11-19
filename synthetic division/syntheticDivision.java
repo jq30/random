@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 
-public class fuckSyntheticDivision {
+public class syntheticDivision {
   public static void main(String[] args) {
     //c for coefficients
     ArrayList<Integer> c = new ArrayList<Integer>();
