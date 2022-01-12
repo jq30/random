@@ -38,7 +38,14 @@ public class syntheticDivision {
       for (int l = 1; l < c.size(); l++) {
         answer.add(new RationalNumber(c.get(l), 1).add(answer.get(l-1).multiply(r.get(k))));
       }
-      System.out.println(r.get(k) + " | " + answer);
+
+      System.out.print(r.get(k) + " | " + answer);
+
+      if (answer.get(answer.size() - 1).getValue() == 0) {
+        System.out.println(" -ROOT");
+      } else {
+        System.out.println();
+      }
     }
   }
 
